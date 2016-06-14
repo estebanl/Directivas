@@ -1,0 +1,40 @@
+<style>
+    .invalido {
+        border-color: red;
+    }
+</style>
+<div class="form-inline">
+    <div class="form-group">
+        <label class="label-control">Direccion</label>
+        <br/>
+        <select name="uno" ng-class="vm.formulario.uno.$touched && vm.formulario.uno.$invalid ? 'invalido' : ''" ng-model="vm.uno" class="form-control" ng-init="vm.uno = vm.nomenclatura[0]" required>
+        <option ng-repeat="nom in vm.nomenclatura">{{nom}}</option>
+    </select>
+        <input name="dos" ng-class="vm.formulario.dos.$touched && vm.formulario.dos.$invalid ? 'invalido' : ''" ng-model="vm.dos"
+            placeholder="12" class="form-control" style="width:50px" required/>
+    
+        <input name="tres" ng-class="vm.formulario.tres.$touched && vm.formulario.tres.$invalid ? 'invalido' : ''" ng-model="vm.tres" placeholder="C" class="form-control" style="width:50px" required/>
+        
+        <input name="cuatro" ng-class="vm.formulario.cuatro.$touched && vm.formulario.cuatro.$invalid ? 'invalido' : ''" ng-model="vm.cuatro" placeholder="sur" class="form-control" style="width:60px" required/>
+        <span><strong>{{vm.numeral}}</strong></span>
+
+        <input name="cinco" ng-class="vm.formulario.cinco.$touched && vm.formulario.cinco.$invalid ? 'invalido' : ''" ng-model="vm.cinco" placeholder="12" class="form-control" style="width:50px" required/>
+
+        <input name="seis" ng-class="vm.formulario.seis.$touched && vm.formulario.seis.$invalid ? 'invalido' : ''" ng-model="vm.seis" placeholder="A Bis" class="form-control" style="width:70px" required>
+
+        <span><strong>{{vm.guion}}</strong></span>
+
+        <input name="siete" ng-class="vm.formulario.siete.$touched && vm.formulario.siete.$invalid ? 'invalido' : ''" ng-model="vm.siete" placeholder="23" class="form-control" style="width:50px" required/>
+
+        <input name="ocho" ng-class="vm.formulario.ocho.$touched && vm.formulario.ocho.$invalid ? 'invalido' : ''" ng-model="vm.ocho" placeholder="Barrio,Apart,Piso,Ofic,Torre,Manzana,Casa" class="form-control" style="width:200px"
+            required/>
+
+    </div>
+    <!--Carrera 17k #74b Sur-2 a 74b Sur-72, Bogotá, Colombia
+    Calle 73 Sur #17n-1 a 17n-79, Bogotá, Colombia
+    https://www.cnsc.gov.co/
+    <h1>Direccion</h1>-->
+    <!--<pre>{{vm.formulario | json}}</pre>-->
+    <pre>{{vm.modelo = vm.uno +" "+vm.dos +" "+vm.tres +" "+ vm.cuatro +" "+ vm.cinco +" "+ vm.seis +" "+ vm.siete +" "+ vm.ocho}}</pre>
+
+</div>

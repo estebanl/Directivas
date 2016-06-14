@@ -1,0 +1,82 @@
+<div>
+    <style>
+        .invalido {
+            border-color: red;
+        }
+        .numero-via {
+            width: 55px !important;
+        }
+        .prefijo-cuadrante {
+            width: 60px !important;
+        }
+        .complemento {
+            width: 200px !important;
+        }
+    </style>
+    <div class="form-inline">
+        <div class="form-group">
+            <label class="label-control">Dirección</label>
+            <br/>
+            <select name="TipoVia" 
+            ng-options="tipo as tipo.Valor for tipo in TipoVias track by tipo.Guid "
+            ng-class="formulario.TipoVia.$touched && formulario.TipoVia.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.TipoVia" 
+            class="form-control" 
+            required>
+            <option value="">Seleccione</option>
+            </select>
+            <input name="NumVia" 
+            ng-class="formulario.NumVia.$touched && formulario.NumVia.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.NumVia" 
+            placeholder="12 c" 
+            class="form-control numero-via" 
+            maxlength="10"
+            required/>
+
+    
+            <input name="PrefijoCuadrante" 
+            ng-class="formulario.PrefijoCuadrante.$touched && formulario.PrefijoCuadrante.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.PrefijoCuadrante" 
+            placeholder="Sur" 
+            class="form-control prefijo-cuadrante"
+            maxlength="10" />
+
+            <span><strong>{{numeral}}</strong></span>
+
+            <input name="NumViaGeneradora" 
+            ng-class="formulario.NumViaGeneradora.$touched && formulario.NumViaGeneradora.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.NumViaGeneradora" 
+            placeholder="12 f" 
+            class="form-control numero-via" 
+            maxlength="5"
+            required/>
+
+            <input name="PrefijoCudranteViaGeneradora" 
+            ng-class="formulario.PrefijoCudranteViaGeneradora.$touched && formulario.PrefijoCudranteViaGeneradora.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.PrefijoCudranteViaGeneradora" 
+            placeholder="Bis" 
+            class="form-control prefijo-cuadrante" 
+            maxlength="10">
+
+            <span><strong>{{guion}}</strong></span>
+
+            <input name="NumeroPlaca" 
+            ng-class="formulario.NumeroPlaca.$touched && formulario.NumeroPlaca.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.NumeroPlaca" 
+            placeholder="23" 
+            class="form-control numero-via" 
+            maxlength="5"
+            required/>
+
+            <input name="Complemento" 
+            ng-class="formulario.Complemento.$touched && formulario.Complemento.$invalid ? 'invalido' : ''" 
+            ng-model="modelo.Complemento" 
+            placeholder="Barrio,Apart,Piso,Ofic,Torre,Manzana,Casa" 
+            class="form-control complemento" 
+            maxlength="30"
+            required/>
+        </div>
+        <hr/>
+        <pre>{{modelo}}</pre>
+    </div>
+</div>

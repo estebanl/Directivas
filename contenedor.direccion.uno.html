@@ -1,0 +1,11 @@
+<div>
+    <h3 style="background:black; color:white">Formulario uno cliente</h3>
+    <form name="formCliente" novalidate>
+        <label>Nombre</label>
+        <input ng-model="vm.cliente.nombre" placeholder="Nombres" class="form-control" />
+        <direccion modelo="vm.cliente.direccion"></direccion>
+        <button  class="btn btn-success btn-xs" type="submit">Guardar</button>
+    </form>
+
+    <pre>{{vm.cliente}}</pre>
+</div>

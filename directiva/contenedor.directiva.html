@@ -1,0 +1,14 @@
+<div>
+    <h3 style="background:black; color:white">Formulario crear</h3>
+    <label>Entidad contacto</label>
+    <pre>{{vm.contacto}}</pre>
+    <form name="formContacto" novalidate>
+        <label>Nombre</label>
+        <input ng-model="vm.contacto.nombre" placeholder="Nombres" class="form-control" />
+        <br/>
+        <it-direccion ng-model="vm.contacto.direccion"></it-direccion>
+
+        <br/>
+        <button ng-disabled="formContacto.$invalid" class="btn btn-success btn-xs" type="submit">Guardar</button>
+    </form>
+</div>

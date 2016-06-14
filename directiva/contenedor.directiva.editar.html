@@ -1,0 +1,14 @@
+<div>
+    <h3 style="background:black; color:white">Formulario editar</h3>
+    <label>Entidad cliente</label>
+    <pre>{{vm.cliente}}</pre>
+    <form name="formCliente" novalidate>
+        <label>Nombre</label>
+        <input ng-model="vm.cliente.nombre" placeholder="Nombres" class="form-control" />
+        <br/>
+        <it-direccion ng-model="vm.cliente.direccion"></it-direccion>
+
+        <br/>
+        <button ng-disabled="formCliente.$invalid" class="btn btn-success btn-xs" type="submit">Guardar</button>
+    </form>
+</div>
